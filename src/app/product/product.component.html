@@ -1,3 +1,16 @@
-<p>
-  product works!
-</p>
+<div class="row">
+	<div *ngFor="let product of products" class="col-md-4">
+		<div class="img-thumbnail mt-3">
+			<img src="http://via.placeholder.com/320x150">
+			<div class="figure-caption px-1">
+				<h4 class="float-right">$ {{product.price}}</h4>
+				<h4>{{product.title}}</h4>
+				<p>{{product.description}}</p>
+			</div>
+			<div>
+				<app-stars></app-stars>
+			</div>
+		</div>
+	</div>	
+</div>
+
