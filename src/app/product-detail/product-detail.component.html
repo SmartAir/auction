@@ -1,9 +1,11 @@
-<div>
+<div class="thumbnail">
 	<img src="http://via.placeholder.com/820x300" alt="...">
-
-	<h4>{{productTitle}}</h4>
+	<div>
+		<h4 class="float-right"> $ {{product.price}} </h4>
+		<h4> {{product.title}} </h4>
+	</div>
 
 	<p>
-		Product Details
+		{{product.description}}
 	</p>
 </div>
