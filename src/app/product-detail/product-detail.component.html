@@ -1,4 +1,4 @@
-<div class="thumbnail">
+<div class="img-thumbnail">
 	<img src="http://via.placeholder.com/820x300" alt="...">
 	<div>
 		<h4 class="float-right"> $ {{product.price}} </h4>
@@ -8,4 +8,26 @@
 	<p>
 		{{product.description}}
 	</p>
+
+	<div>
+		<p class="float-right">{{comments.length}} comments</p>
+
+		<p>
+			<app-stars [rating]="product.rating"></app-stars>
+		</p>
+	</div>
+</div>
+
+<div class="card card-block bg-light mt-2">
+	<h5 class="mx-3 mt-2">Ratings</h5>
+	<div *ngFor="let comment of comments" class="row mx-1">
+		<div class="col-md-12">
+			<hr>
+			<app-stars [rating]="comment.rating"></app-stars>
+			<span>{{comment.user}}</span>
+			<span class="float-right">{{comment.timestamp}}</span>
+			<p></p>
+			<p>{{comment.content}}</p>
+		</div>
+	<div>
 </div>
